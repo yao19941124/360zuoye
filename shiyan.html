@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+		<script src="js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/360style.css" />
+
+		<script type="text/javascript">
+			//自动轮播部分
+			$(function() {
+				$('.carousel').carousel({
+					interval: 2500
+				});
+			})
+
+			//			点击显示   关闭
+			$(function() {
+				$("#fcd1").click(function() {
+					$("#citydiv1").css("display", "block")
+					return false;
+				})
+				$("#guan1").click(function() {
+					$("#citydiv1").css("display", "none")
+					return false;
+				})
+				$("#fcd2").click(function() {
+					$("#citydiv2").css("display", "block")
+					$("#citydiv3 ").css("display", "none")
+					return false;
+				})
+				$("#guan2").click(function() {
+					$("#citydiv2").css("display", "none")
+					return false;
+				})
+				$("#fcd3").click(function() {
+					$("#citydiv3").css("display", "block")
+					$("#citydiv2").css("display", "none")
+					return false;
+				})
+				$("#guan3").click(function() {
+					$("#citydiv3 ").css("display", "none")
+					return false;
+				})
+
+				//				$.ajax({
+				//					type: 'get',
+				//					url: 'json/1.json',
+				//					dataType: 'json',
+				//					success: function(data) {
+				//						alert("1");
+				//						$("#sss").append("<img src=" + data.shop_data[0].shop_ico + " />");
+				//						$("#sss").append(data.shop_data[0].addr_detail);
+				//					}
+				//				});
+
+				//				$.ajax({
+				//					type: "get",
+				//					url: "./2.json",
+				//					async: true,
+				//					dataType: "json",
+				//					success: function(data) {
+				//				
+				//						alert("1");
+				//						alert(JSON.stringify(data));
+				//					},
+				//					error: function(XMLHttpRequest, textStatus, errorThrown) {
+				//						alert(XMLHttpRequest.status);
+				//						alert(XMLHttpRequest.readyState);
+				//						alert(textStatus);
+				//					}
+				//				});
+
+			})
+			$(function() {
+				$.ajax({
+					type: "get",
+					url: "./2.json",
+					async: true,
+					dataType: "json",
+					success: function(data) {
+						$.each(data.shop_data, function(i, item) {
+							$("#jingtai").append(
+								"<div class='forxuan'>"
+								+"<img src= " + item.shop_ico + " style='width:90px;height:90px'>"
+								
+								+"<div class='forxuanl' style='float: left;'>"
+								+"<a href='' class='for_a' >"+ item.shop_name+"</a>"
+								+"<p class='for_p'>主营："+item.main+"</p>"
+								+"<p class='for_p'>地址："+item.addr_detail+"</p>"
+								
+								+"</div>"
+								+"<div class='forxuanr'>"
+								+"<ul>"
+								+"<li><img src='img/money.png'/>先行赔付</li>"
+								+"<li><img src='img/money.png'/>先行赔付</li>"
+								+"<li>人气："+item.shop_visit+"</li>"
+								+"</ul>"
+								+"</div>"
+								+"<a href='' class='inshop'>进入店铺</a>"
+								
+								+"</div>"
+							);
+						});
+					}
+				});					
+			})
+		</script>
+
+		<script src="js/getjson.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<!--头部栏（登录注册）-->
+		<div id="headlan">
+			<div id="inheadlan">
+				<div id="inheadleft">
+					<ul>
+						<li style="font-size: 14px;color: #185;">大连</li>
+						<li id="fcd1">
+							<a href="">[切换城市]</a>
+							<div id="citydiv1">
+								<span id="guan1"><a href="" style="width: 55px;height: 20px;"></a></span>
+							</div>
+						</li>
+						<span></span>
+						<a href="">
+							<li>同城帮首页</li>
+						</a>
+
+					</ul>
+				</div>
+				<div id="inheadright">
+					<ul>
+						<a href="">
+							<li>登录</li>
+						</a>
+						<span></span>
+						<a href="">
+							<li>注册</li>
+						</a>
+						<span></span>
+						<a href="">
+							<li>我的订单</li>
+						</a>
+						<span></span>
+						<a href="">
+							<li>客服电话:4000-399-360</li>
+						</a>
+						<span></span>
+						<a href="">
+							<li>客户服务<b></b></li>
+						</a>
+						<span></span>
+						<a href="">
+							<li>论坛</li>
+						</a>
+						<span></span>
+						<a href="" style="color: red;">
+							<li>投诉建议</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container" style="padding: 0;">
+
+			<!--导航部分-->
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<a href=""><img src="img/logo.png" /></a>
+					<div id="nav">
+						<ul>
+							<li>
+								<a href="">二手良品</a><i></i></li>
+							<li>
+								<a href="">手机回收</a>
+							</li>
+							<li>
+								<a href="">手机维修</a>
+							</li>
+							<li>
+								<a href="">电脑维修</a>
+							</li>
+							<li>
+								<a href="">以旧换新</a>
+							</li>
+							<li>
+								<a href="">手机租用</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!--轮播图-->
+			<div class="row clearfix">
+
+				<div class="col-md-12 column" style="width: 1200px;padding: 0;">
+
+					<div class="carousel slide" id="carousel-512622" id="outgun">
+
+						<!--hover栏 -->
+						<div id="hoverlan">
+
+							<div id="blacklan1">
+								<a href="" style="padding-left: 100px;height: 85px;display: inline-block;">
+									修手机/Pad
+								</a>
+								<div id="yincang1">
+									<div class="for1">
+										<p>屏幕></p>
+										<a href="">屏碎,但显示正常</a>
+										<a href="">屏幕不显示或花屏</a>
+										<a href="">屏幕触摸失灵</a>
+										<a href="">Pad更换屏幕</a>
+									</div>
+									<div class="for1">
+										<p>电池/充电/开机></p>
+										<a href="">电池问题</a>
+										<a href="">不开机</a>
+										<a href="">充电(连接)问题</a>
+									</div>
+									<div class="for1">
+										<p>按键></p>
+										<a href="">开关机键失灵</a>
+										<a href="">Home键失灵</a>
+										<a href="">音量键失灵</a>
+									</div>
+									<div class="for1">
+										<p>声音/震动></p>
+										<a href="">听筒问题</a>
+										<a href="">麦克风问题</a>
+										<a href="">外放扬声器问题</a>
+										<a href="">耳机插口故障</a>
+										<a href="">震动功能失效</a>
+									</div>
+									<div class="for1">
+										<p>拍照/录像></p>
+										<a href="">后摄像头无法拍照</a>
+										<a href="">前摄像头拍摄故障</a>
+									</div>
+									<div class="for1">
+										<p>外壳/边框></p>
+										<a href="">中框变形</a>
+										<a href="">手机换彩壳</a>
+									</div>
+									<div class="for1">
+										<p>进水入液/主板故障></p>
+										<a href="">进水入液</a>
+										<a href="">手机主板故障</a>
+									</div>
+									<div class="for1">
+										<p>其他故障></p>
+										<a href="">软件升级/刷机</a>
+										<a href="">WiFi功能故障</a>
+									</div>
+									<div class="for1">
+										<p>个性化服务></p>
+										<a href="">点亮iphone logo</a>
+										<a href="">蓝光护眼钢化膜</a>
+										<a href="">极透高清钢化膜</a>
+										<a href="">爱机深度清洁</a>
+										<a href="">手机换彩壳</a>
+									</div>
+
+								</div>
+							</div>
+
+							<div id="blacklan2">
+								<a href="" style="padding-left: 100px;height: 85px;display: inline-block;">
+									修电脑
+								</a>
+								<div id="yincang2">
+									<p>热门问题：</p>
+									<div class="yincangr">
+										<a href="">系统重装</a>
+										<a href="">电脑清灰</a>
+										<a href="">VR移机/安装</a>
+										<a href="">数据恢复</a>
+										<a href="">系统故障修复</a>
+										<a href="">驱动安装</a>
+									</div>
+									<p>其他问题：</p>
+									<div class="yincangr">
+										<a href="">游戏加速</a>
+										<a href="">开机加速</a>
+										<a href="">网速优化</a>
+										<a href="">蓝屏死机</a>
+										<a href="">电脑没声音</a>
+										<a href="">路由器调试</a>
+										<a href="">无法上网</a>
+										<a href="">家庭局域网</a>
+										<a href="">更换风扇</a>
+										<a href="">病毒查杀</a>
+									</div>
+								</div>
+							</div>
+
+							<div id="blacklan3">
+								<a href="" style="padding-left: 100px;height: 85px;display: inline-block;">
+									卖手机
+								</a>
+								<div id="yincang3">
+									<a href="">三星</a>
+									<a href="">小米</a>
+									<a href="">苹果</a>
+									<a href="">步步高</a>
+									<a href="">华为</a>
+									<a href="">OPPO</a>
+									<a href="">HTC</a>
+									<a href="">魅族</a>
+									<a href="">索尼</a>
+									<a href="">联想</a>
+									<a href="">中兴</a>
+									<a href="">酷派</a>
+									<a href="">诺基亚</a>
+									<a href="">朵唯</a>
+									<a href="">乐视</a>
+									<a href="">一加</a>
+									<a href="">LG</a>
+									<a href="">黑莓</a>
+									<a href="">摩托摩拉</a>
+									<a href="">360手机</a>
+									<a href="">微软</a>
+									<a href="">锤子</a>
+									<a href="">金立</a>
+									<a href="">TCL</a>
+									<a href="">360手机</a>
+									<a href="">小辣椒</a>
+								</div>
+							</div>
+
+							<div id="blacklan4">
+								<a href="" style="padding-left: 100px;height: 85px;">
+									买二手机
+								</a>
+								<div id="yincang4">
+									<a href="">OPPO</a>
+									<a href="">HTC</a>
+									<a href="">魅族</a>
+									<a href="">索尼</a>
+									<a href="">联想</a>
+									<a href="">一加</a>
+									<a href="">LG</a>
+									<a href="">黑莓</a>
+									<a href="">摩托摩拉</a>
+									<a href="">360手机</a>
+									<a href="">三星</a>
+									<a href="">小米</a>
+									<a href="">苹果</a>
+									<a href="">步步高</a>
+									<a href="">华为</a>
+									<a href="">中兴</a>
+									<a href="">酷派</a>
+									<a href="">诺基亚</a>
+									<a href="">朵唯</a>
+									<a href="">乐视</a>
+									<a href="">金立</a>
+								</div>
+							</div>
+
+						</div>
+						<ol class="carousel-indicators" id="gundong">
+							<li data-slide-to="0" data-target="#carousel-512622" class="active">
+							</li>
+							<li data-slide-to="1" data-target="#carousel-512622">
+							</li>
+							<li data-slide-to="2" data-target="#carousel-512622">
+							</li>
+							<li data-slide-to="3" data-target="#carousel-512622">
+							</li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item active">
+								<a href=""><img alt="" src="img/bigphoto1.png" /></a>
+
+							</div>
+							<div class="item">
+								<a href=""><img alt="" src="img/bigphoto2.png" /></a>
+
+							</div>
+							<div class="item">
+								<a href=""><img alt="" src="img/bigphoto3.jpg" /></a>
+
+							</div>
+							<div class="item">
+								<a href=""><img alt="" src="img/bigphoto4.png" /></a>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--手机图部分-->
+			<div class="row clearfix">
+				<div class="col-md-3 column" style="padding: 0;">
+					<a href=""><img src="img/photo1.jpg" /></a>
+				</div>
+				<div class="col-md-3 column" style="padding: 0;">
+					<a href=""><img src="img/photo2.jpg" /></a>
+				</div>
+				<div class="col-md-3 column" style="padding: 0;">
+					<a href=""><img src="img/photo3.jpg" /></a>
+				</div>
+				<div class="col-md-3 column" style="padding: 0;">
+					<a href=""><img src="img/photo4.jpg" /></a>
+				</div>
+			</div>
+
+			<!--手机图部分iphone1-->
+			<div class="row clearfix">
+				<h3>热门手机回收</h3>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href=""><img src="img/gg2.png" /></a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!--手机图部分iphone2-->
+			<div class="row clearfix">
+				<h3>二手良品精选</h3>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href=""><img src="img/gg1.png" /></a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 column" style="padding: 0;">
+					<a href="">
+						<div class="phonepic">
+							<img src="img/photo5.jpg" />
+							<p>苹果iphone6</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<!--到店维修 分页部分-->
+			<div class="row clearfix" style="height: 1100px;">
+				<h3>到店维修</h3>
+				<div id="biaodan">
+
+					<!--下部点击隐藏城市-->
+					<div id="fcd2">
+						<a href="">重庆</a>
+						<div id="citydiv2">
+							<i id="guan2"><a href="" style="width: 55px;height: 20px;border: none;"></a></i>
+						</div>
+					</div>
+					<div id="fcd3">
+						<a href="">选择区县</a>
+						<div id="citydiv3">
+							<i id="guan3"><a href="" style="width: 55px;height: 20px;border: none;"></a></i>
+						</div>
+					</div>
+					<input type="text" name="sousuo" id="sousuo" value="" />
+					<a href="" id="an" style="width: 120px;height: 42px;">搜索</a>
+
+				</div>
+				<div class="col-md-9 column" style="padding: 0;">
+					<div id="fenye">
+						<!--选项部分-->
+						<div id="xuanxiang">
+							<a href="">默认排序</a>
+							<a href="">按成交量</a>
+							<a href="">按人气</a>
+							<input type="checkbox" name="" id="" value="" />
+							<span>先行赔付</span>
+
+							<a href="" id="map">地图模式</a>
+						</div>
+
+						<!--引json静态数据部分-->
+						<div id="jingtai">
+
+						</div>
+
+						<!--引json静态数据部分-->
+						<div id="yema">
+							<ul class="pagination pagination-lg">
+								<li>
+									<a href="#">&laquo;</a>
+								</li>
+								<li>
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">3</a>
+								</li>
+								<li>
+									<a href="#">4</a>
+								</li>
+								<li>
+									<a href="#">5</a>
+								</li>
+								<li>
+									<a href="#">6</a>
+								</li>
+								<li>
+									<a href="#">7</a>
+								</li>
+								<li>
+									<a href="#">8</a>
+								</li>
+								<li>
+									<a href="#">9</a>
+								</li>
+								<li>
+									<a href="#">10</a>
+								</li>
+								<li>
+									<a href="#">&raquo;</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-3 column" style="padding: 0;">
+					<div id="shopright">
+						<h2 style="margin-top: 0;margin-bottom: 0;">商家好评榜</h2>
+						<div class="topshop">
+							<b>①</b>
+							<img src="img/pic1.jpg" />
+							<a href="">重庆普北电脑科技</a>
+							<p>1236条评论</p>
+						</div>
+						<div class="topshop">
+							<b>②</b>
+							<img src="img/pic1.jpg" />
+							<a href="">重庆普北电脑科技</a>
+							<p>1236条评论</p>
+						</div>
+						<div class="topshop">
+							<b>③</b>
+							<img src="img/pic1.jpg" />
+							<a href="">重庆普北电脑科技</a>
+							<p>1236条评论</p>
+						</div>
+						<div class="topshop">
+							<b>④</b>
+							<img src="img/pic1.jpg" />
+							<a href="">重庆普北电脑科技</a>
+							<p>1236条评论</p>
+						</div>
+						<div class="topshop">
+							<b>⑤</b>
+							<img src="img/pic1.jpg" />
+							<a href="">重庆普北电脑科技</a>
+							<p>1236条评论</p>
+						</div>
+						<div class="topshop">
+							<b>⑥</b>
+							<img src="img/pic1.jpg" />
+							<a href="">重庆普北电脑科技</a>
+							<p>1236条评论</p>
+						</div>
+						<div class="topshop" style="border-bottom: none;">
+							<b>⑦</b>
+							<img src="img/pic1.jpg" />
+							<a href="">重庆普北电脑科技</a>
+							<p>1236条评论</p>
+						</div>
+					</div>
+					<div id="" style="height: 140px;">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--foot部分-->
+		<!--外包底部，100年诚信-->
+		<div id="footlan">
+			<div id="footup">
+				<div class="footupul">
+					<p id="ptu1"></p>
+					<ul>
+						<b>购物指南</b>
+						<a href="">
+							<li>购物流程</li>
+						</a>
+						<a href="">
+							<li>用户注册</li>
+						</a>
+						<a href="">
+							<li>帮助文档</li>
+						</a>
+					</ul>
+				</div>
+				<div class="footupul">
+					<p id="ptu2"></p>
+					<ul>
+						<b>支付方式</b>
+						<a href="">
+							<li>在线支付</li>
+						</a>
+						<a href="">
+							<li>当面支付</li>
+						</a>
+					</ul>
+				</div>
+				<!--= =-->
+				<div class="footupul">
+					<p id="ptu3"></p>
+					<ul>
+						<b>售后服务</b>
+						<a href="">
+							<li>投诉建议</li>
+						</a>
+
+					</ul>
+				</div>
+				<!--* *-->
+				<div class="footupul">
+					<p id="ptu4"></p>
+					<ul>
+						<b>特色保障</b>
+						<a href="">
+							<li>360担保支付</li>
+						</a>
+					</ul>
+				</div>
+				<div class="footupul">
+					<p id="ptu5"></p>
+					<ul style="margin-right: 0;">
+						<b>商家合作</b>
+						<a href="" style="color:dodgerblue;">
+							<li>加盟同城帮</li>
+						</a>
+
+					</ul>
+				</div>
+			</div>
+			<div id="footdown">
+				<p style="height: 50px;"></p>
+				<p>客服电话：4000-399-360&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;投诉建议 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网站地图</p>
+				<p>Copyright&nbsp;©&nbsp;2005-2016&nbsp;&nbsp;360.CN&nbsp;&nbsp;All Rights&nbsp;Reserved&nbsp;&nbsp;360安全中心</p>
+				<p>京ICP备08010314号-19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京公网安备110000000006号</p>
+			</div>
+		</div>
+		<div id="ewm">
+			<a href="" id="ws"></a>
+		</div>
+		<div id="sss">
+
+		</div>
+	</body>
+
+</html>

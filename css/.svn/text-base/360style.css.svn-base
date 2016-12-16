@@ -1,0 +1,218 @@
+/*通用样式*/
+*{margin: 0 auto;padding: 0;font-size: 14px;}
+
+li{list-style: none;}
+a{text-decoration: none;color: #666;}
+a:hover{color: #666;text-decoration: none;}
+
+
+/*头部栏样式*/
+#headlan{height: 32px;background-image:url(../img/headbg.png);
+border-bottom: 1px solid #c7c7c7;}
+#inheadlan{width: 1200px;height:32px;}
+
+/*头部隐藏栏*/
+#fcd1{position: relative;}
+#citydiv1{width: 460px;height: 220px;background: pink;position: absolute;z-index: 50;
+top: 26px;left: 0;border: 1px solid gainsboro;display: none;}
+#citydiv1 #guan1{height: 20px;width: 55px;float: right;display: inline-block;
+background-image: url(../img/guanbi.png);background-repeat: no-repeat;
+background-position-y: -8px;margin-right: 5px;margin-top: 5px;}
+
+
+#inheadleft{float: left;}
+#inheadleft li{float: left;line-height: 32px;padding-right: 10px;}
+#inheadleft a{float: left;line-height: 32px;font-size: 13px;}
+
+#inheadleft span{background-image: url(../img/headto.gif);
+background-repeat: no-repeat;background-position-y: 6px;
+width: 20px;float: left;height: 32px;}
+#inheadright{float: right;}
+#inheadright span{background-image: url(../img/headto.gif);
+background-repeat: no-repeat;background-position-y: 6px;
+width: 13px;float: left;height: 32px;margin: 0 5px;}
+#inheadright b{background-image: url(../img/headto.gif);background-repeat: no-repeat;
+width: 20px;height: 32px;float: right;
+background-position-x: 10px;background-position-y:-33px ;}
+#inheadright a{float: left;line-height: 32px;font-size: 13px;}
+#inheadright a:hover{text-decoration: underline;}
+/*导航栏    logo样式*/
+#nav{float: right;}
+#nav li{float: left;height: 73px;line-height: 73px;position: relative;}
+#nav a{height: 40px;line-height: 40px;width: 70px;padding: 13px 23px;}
+#nav a:hover{background: gainsboro;}
+i{position: absolute;top: 13px;right: 6px;width: 24px;height: 15px;
+background-image: url(../img/hot.png);background-repeat: no-repeat;}
+
+
+
+/*轮播图部分*/
+#outgun{position: relative;}
+#gundong{width: 100px;margin: 0;position: absolute;bottom: 10px;left: 1080px;}
+
+/*轮播hover部分*/
+#hoverlan{height: 340px;background:rgba(0,0,0,0.5);width: 240px;position: absolute;top: 0;left: 0;z-index: 10;}
+#blacklan1{border-bottom: 1px solid gray;height: 85px;background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -10px;}
+#blacklan2{border-bottom: 1px solid gray;height: 85px;background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -110px;}
+#blacklan3{border-bottom: 1px solid gray;height: 85px;background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -210px;}
+#blacklan4{border-bottom: 1px solid gray;height: 85px;background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -310px;}
+
+#hoverlan a{color: white;font-size: 16px;line-height: 85px;}
+
+#yincang1{width: 700px;height: 450px;border: 1px solid green;background: white;display: none;
+position:absolute; top: 0;left: 240px;background: ghostwhite;}
+#blacklan1:hover #yincang1{display: block;}
+
+#yincang1 .for1{height: 48px;}
+#yincang1 p{color: #333333;font-size: 12px;display: inline-block;width: 150px;text-align: right;
+line-height: 20px;margin: 0;padding-right: 8px;}
+#yincang1 a{color: #333333;font-size: 12px;display: inline-block;height: 20px;line-height: 20px;
+border-left: 1px solid gainsboro;padding-left: 10px;padding-right: 10px;margin: 20px 0;}
+#yincang1 a:hover{color: green;}
+
+
+#yincang2{width: 700px;height: 340px;border: 1px solid green;background: white;display: none;
+position:absolute;top: 0;left: 240px;background: ghostwhite;}
+#blacklan2:hover #yincang2{display: block;}
+#yincang2 a{color: #333333;line-height: 0;display: inline-block;border: 1px solid gainsboro;
+width: 120px;height: 40px;line-height: 40px;text-align: center;font-size: 12px;
+margin-left: 15px;margin-top: 25px;}
+#yincang2 a:hover{border: 1px solid green;color: green;}
+#yincang2 p{display: inline-block;float: left;margin-top:35px;margin-left: 20px;}
+.yincangr{display: inline-block;width: 600px;}
+
+
+#yincang3{width: 700px;height: 450px;border: 1px solid green;background: white;display: none;
+position:absolute;top: 0;left: 240px;background: ghostwhite;}
+#blacklan3:hover #yincang3{display: block;}
+#yincang3 a{color: #333333;line-height: 0;display: inline-block;border: 1px solid gainsboro;
+width: 120px;height: 40px;line-height: 40px;text-align: center;font-size: 12px;
+margin-left: 15px;margin-top: 25px;}
+#yincang3 a:hover{border: 1px solid green;color: green;}
+
+#yincang4{width: 700px;height: 340px;border: 1px solid green;background: white;display: none;
+position:absolute;top: 0;left: 240px;background: ghostwhite;}
+#blacklan4:hover #yincang4{display: block;}
+#yincang4 a{color: #333333;line-height: 0;display: inline-block;border: 1px solid gainsboro;
+width: 120px;height: 40px;line-height: 40px;text-align: center;font-size: 12px;
+margin-left: 15px;margin-top: 25px;}
+#yincang4 a:hover{border: 1px solid green;color: green;}
+
+
+
+#hoverlan #blacklan1:hover{background:rgba(0,255,0,0.5);background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -10px;}
+
+#hoverlan #blacklan2:hover{background:rgba(0,255,0,0.5);background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -110px;}
+#hoverlan #blacklan3:hover{background:rgba(0,255,0,0.5);background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -210px;}
+#hoverlan #blacklan4:hover{background:rgba(0,255,0,0.5);background-image: url(../img/图标.png);
+background-repeat: no-repeat;background-position-y: -310px;}
+
+
+
+/*手机图片部分iphone*/
+.phonepic{text-align: center;padding-top: 20px;}
+.phonepic p{margin-top: 15px;}
+
+/*购物分页部分*/
+
+#shopright{height: 708px;width: 270px;border: 1px solid gainsboro;}
+h2{height: 42px;font-size: 22px;text-align: center;line-height: 42px;
+border-bottom: 1px solid gainsboro;background: ghostwhite;}
+
+
+
+/*分页表单搜索*/
+#biaodan{width: 890px;height: 82px;padding:0 20px;float: left;padding: 0;position: relative;}
+#biaodan a{width: 142px;height: 42px;border: 1px solid green;display: inline-block;
+text-align: center;line-height: 42px;margin-top: 2px;}
+#sousuo{border: 1px solid green;width: 468px;height: 42px;padding-left: 10px;
+padding-bottom: 5px;padding-top:5px;position: relative;bottom: 1px;left: 0;}
+#an{width: 100px;height: 42px;background: green;color: white;position: absolute;top: 0;right: 12px;margin: 0;}
+#xuanxiang{height: 44px;width: 890px;background: ghostwhite;border: 1px solid gainsboro;}
+#xuanxiang a{width: 120px;height: 44px;display: inline-block;line-height: 44px;text-align: center;}
+#xuanxiang #map{width: 100px;height: 30px;border: 1px solid gainsboro;display: inline-block;
+line-height: 30px;background: white;float: right;background-image: url(../img/map.png);
+background-repeat: no-repeat;background-position-x: 7px;padding-left: 14px;margin-top: 6px;margin-right: 20px;}
+
+/*下部城市隐藏菜单*/
+#fcd2{position: relative;display: inline-block;}
+#citydiv2{width: 460px;height: 220px;background: pink;position: absolute;z-index: 50;
+top: 45px;left: 0;border: 1px solid gainsboro; display: none;}
+#fcd2 #citydiv2 #guan2{height: 20px;width: 55px;float: right;display: inline-block;
+background-image: url(../img/guanbi.png);background-repeat: no-repeat;
+background-position-y: -7px;margin-right: 5px;margin-top: 5px;}
+
+#fcd3{position: relative;display: inline-block;}
+#citydiv3{width: 460px;height: 220px;background: pink;position: absolute;z-index: 50;
+top: 45px;left: 0;border: 1px solid gainsboro; display: none;}
+#fcd3 #citydiv3 #guan3{height: 20px;width: 55px;float: right;display: inline-block;
+background-image: url(../img/guanbi.png);background-repeat: no-repeat;
+background-position-y: -7px;margin-right: 5px;margin-top: 5px;}
+
+
+/*分页主要部分*/
+#fenye{width: 890px;height: 860px;margin: 0;}
+
+.forxuan{width: 890px;height: 144px;border-bottom: 1px solid gainsboro;
+padding-top: 26px;padding-bottom: 26px;}
+.forxuan img{float: left;margin-right: 10px;}
+
+.forxuanl{width: 430px;text-overflow:ellipsis;
+white-space:nowrap;overflow:hidden;}
+
+.forxuanr{float: left;margin-left: 40px;}
+#fenye .forxuanr li{margin-bottom: 15px;font-size: 13px;}
+#fenye .forxuanr img{margin-right: 5px;}
+
+
+#fenye .forxuanl .for_p{margin-bottom: 0;margin-top: 20px;font-size: 12px;}
+
+.topshop{height: 95px;width: 270px;border-bottom: 1px solid gainsboro;padding: 22px 0;}
+.topshop b{color: orangered;float: left;margin: 0 15px;font-size: 23px;line-height: 50px;}
+.topshop img{width: 50px;height: 50px;float: left;margin-right: 10px;}
+.topshop a{float: left;margin-right: 35px;margin-bottom: 10px;color: green;}
+.topshop p{float: left;font-size: 14px;margin: 0;}
+
+.inshop{float: right;border: 1px solid green;color: green;background: white;
+width: 150px;height: 45px;text-align: center;line-height: 45px;font-size: 20px;
+margin-top: 20px;margin-right: 5px;display: none;}
+.forxuan:hover{background: ghostwhite;}
+.forxuan:hover .inshop{color: green;display: block;}
+
+
+
+
+#yema{margin-left: 150px;}
+
+/*foot部分样式*/
+#footlan{border-top: 1px solid gainsboro;height: 300px;background: ghostwhite;}
+#footup{border-bottom: 1px solid gainsboro;height: 150px;width: 1000px;padding-top: 15px;}
+
+#footup .footupul p{width: 44px;height: 44px;float: left;}
+#ptu1{background-image: url(../img/footpic.gif);background-repeat: no-repeat;}
+#ptu2{background-image: url(../img/footpic.gif);background-repeat: no-repeat;background-position-y:-44px;}
+#ptu3{background-image: url(../img/footpic.gif);background-repeat: no-repeat;background-position-y:-88px;}
+#ptu4{background-image: url(../img/footpic.gif);background-repeat: no-repeat;background-position-y:-132px;}
+#ptu5{background-image: url(../img/footpic.gif);background-repeat: no-repeat;background-position-y:-176px;}
+#footup .footupul ul{float: left;margin-left: 5px;margin-right: 80px;}
+#footup .footupul b{font-size: 20px;height: 35px;line-height: 35px;}
+#footup .footupul li{margin:10px 0;}
+#footup .footupul a{font-size: 12px;}
+#footup .footupul a:hover{text-decoration: underline;}
+#footdown{height: 150px;width: 1000px;}
+
+#footdown p{font-size: 12px;text-align: center;margin: 0;height: 20px;line-height: 20px;}
+
+/*浮动二维码*/
+#ewm{width:72px ;height: 170px;background-image: url(../img/二维码.png);
+background-repeat: no-repeat;position: fixed;right: 10px;bottom: 150px;
+background-position-x: -78px;z-index: 2000;}
+#ws{display:inline-block;width: 71px;height: 18px;margin-top: 56px;}
+#ws:hover{background-image: url(../img/二维码.png);background-repeat: no-repeat;background-position-y: -56px;}
